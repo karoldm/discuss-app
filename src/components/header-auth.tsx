@@ -23,6 +23,7 @@ export default function HeaderAuth() {
             <Popover placement="left" >
                 <PopoverTrigger>
                     <Avatar
+                        as="button"
                         src={session?.data?.user.image || undefined}
                         alt={session?.data?.user.name || "User Avatar"}
                         className="cursor-pointer"
