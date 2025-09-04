@@ -1,4 +1,6 @@
-import TopicCreateForm from "@/components/topics/TopicCreateForm";
+import TopicCreateForm from "@/components/topics/topic-create-form";
+import PostList from "@/components/posts/post-list";
+import { fetchTopPosts } from "@/db/queries/posts";
 
 export default async function Home() {
 
@@ -8,6 +10,7 @@ export default async function Home() {
         <h1 className="text-xl m2">
           top posts
         </h1>
+        <PostList fetchData={fetchTopPosts} />
       </div>
       <div>
         <TopicCreateForm />

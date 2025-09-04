@@ -6,7 +6,6 @@ interface Props {
 
 }
 
-
 export default async function PostShow({ postId }: Props) { 
     const post = await db.post.findFirst({
         where: { id: postId },
